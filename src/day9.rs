@@ -19,20 +19,6 @@ impl Dir {
     }
 }
 
-fn mv_tail(head: (i32, i32), tail: (i32, i32)) -> (i32, i32) {
-    if tail.0 - head.0 > 1 {
-        (tail.0 - 1, tail.1)
-    } else if head.0 - tail.0 > 1 {
-        (tail.0 + 1, tail.1)
-    } else if tail.1 - head.1 > 1 {
-        (tail.0, tail.1 - 1)
-    } else if head.1 - tail.1 > 1 {
-        (tail.0, tail.1 + 1)
-    } else {
-        tail
-    }
-}
-
 impl From<&str> for Dir {
     fn from(c: &str) -> Dir {
         match c {
@@ -119,8 +105,7 @@ fn part2(instructions: &[(Dir, i32)]) -> usize {
 fn part1_test() {
     assert_eq!(
         part1(&parse(
-            &"
-R 4
+            &"R 4
 U 4
 L 3
 D 1
