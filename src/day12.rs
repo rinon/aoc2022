@@ -108,5 +108,5 @@ fn part1_test() {
 
 #[test]
 fn part2_test() {
-    assert_eq!(part2(&parse(&TEST_INPUT)), 2713310158);
+    assert_eq!(part2(&parse(&TEST_INPUT)), 29);
 }
