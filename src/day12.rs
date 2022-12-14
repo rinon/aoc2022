@@ -85,7 +85,7 @@ fn part1((start, end, _graph, adj): &(usize, usize, Vec<char>, Vec<Vec<usize>>))
 }
 
 #[aoc(day12, part2)]
-fn part2((start, end, graph, adj): &(usize, usize, Vec<char>, Vec<Vec<usize>>)) -> usize {
+fn part2((_start, end, graph, adj): &(usize, usize, Vec<char>, Vec<Vec<usize>>)) -> usize {
     let mut min = usize::MAX;
     for (v, c) in graph.iter().enumerate() {
         if *c == 'S' || *c == 'a' {
